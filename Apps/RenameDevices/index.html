@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+    <body>    
+        <section class="container-fluid">                
+            <div class="container">
+                <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Upload file</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="well dropCover" ondragover="preventDefaultForFile(event)" ondragleave="preventDefaultForFile(event)" ondrop="readFiles(event)">
+                        <div id="dropZone">
+                            <p>Drop your csv file here</p>
+                            <div id="fileName"></div>
+                        </div>
+                    </div>
+                    <button type="button"  id="uploadFile" onClick="uploadFile()" class="btn btn-success active">Upload</button> 
+                </div>
+                
+                </div>
+            </div>
+            <div style="margin-left:8%" >NOTE:In csv file each line contains two values separated with comma(,).In the format old device name,new device name.</div>
+            <div id="showProgress">                
+            </div>            
+        </section> 
+        <div class="loaderCover"><div class="loaderInCenter"><div class="loader"></div><div>Renaming in progress....</div></div></div>
+    </body>
+</html>
